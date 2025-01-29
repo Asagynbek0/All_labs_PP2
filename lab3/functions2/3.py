@@ -77,10 +77,14 @@ movies = [
 "category": "Romance"
 }
 ]
-def score_is_above(movie):
-    if movie["imdb"] > 5.5 :
+
+def under_that_category(movie, movie_cat):
+    if movie["category"] == movie_cat:
         return True
 
+movie_cat=str(input("category = "))
+
 for i in movies:
-    if score_is_above(i):
+    if under_that_category(i, movie_cat):
         print(i["name"])
+

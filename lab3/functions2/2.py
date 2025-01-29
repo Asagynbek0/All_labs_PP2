@@ -78,9 +78,10 @@ movies = [
 }
 ]
 def score_is_above(movie):
-    if movie["imdb"] > 5.5 :
-        return True
-
+    return movie["imdb"] > 5.5
+sublist=[]
 for i in movies:
     if score_is_above(i):
-        print(i["name"])
+        sublist.append(i)
+for film in sublist:
+    print(film)
