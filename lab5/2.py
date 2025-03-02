@@ -8,7 +8,7 @@ def match_string(text):
     else:
         return False
 
-text={"ab","a","aab","abb","aaaabb","abbbb", "abbb"}
+text=["ab","a","aab","abb","aaaabb","abbbb", "abbb"]
 
 for i in text:
     print(f"{i}:{match_string(i)}")
