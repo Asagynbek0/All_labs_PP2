@@ -9,3 +9,4 @@ check_for_true(elements)
 
 elements2 = (1, 0, "a", 2, "V", -1)  
 check_for_true(elements2)
+
