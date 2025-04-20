@@ -8,22 +8,23 @@ WIDTH = 600
 HEIGHT = 600
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("snake") #название игры
 
 CELL = 30
 
-def draw_grid():
+def draw_grid(): #функция для рисование клетки
     for i in range(HEIGHT // CELL):
         for j in range(WIDTH // CELL):
             pygame.draw.rect(screen, colorGRAY, (i * CELL, j * CELL, CELL, CELL), 1)
 
-def draw_grid_chess():
+def draw_grid_chess():  #функция для рисование шахматных клеток
     colors = [colorWHITE, colorGRAY]
 
     for i in range(HEIGHT // CELL):
         for j in range(WIDTH // CELL):
             pygame.draw.rect(screen, colors[(i + j) % 2], (i * CELL, j * CELL, CELL, CELL))
 
-class Point:
+class Point: #точка на поле 
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -83,34 +84,6 @@ class Food:
         self.pos.x = random.randint(0, WIDTH // CELL - 1)
         self.pos.y = random.randint(0, HEIGHT // CELL - 1)
 
-def move(self):
-    # Проверка на столкновение головы с телом
-    new_x = self.body[0].x + self.dx
-    new_y = self.body[0].y + self.dy
-    
-    for segment in self.body:
-        if segment.x == new_x and segment.y == new_y:
-            print("Game Over!")
-            pygame.quit()
-            exit()
-    
-    # Перемещение тела
-    for i in range(len(self.body) - 1, 0, -1):
-        self.body[i].x = self.body[i - 1].x
-        self.body[i].y = self.body[i - 1].y
-
-    self.body[0].x = new_x
-    self.body[0].y = new_y
-
-    # Границы
-    if self.body[0].x >= WIDTH // CELL:
-        self.body[0].x = 0
-    if self.body[0].x < 0:
-        self.body[0].x = WIDTH // CELL - 1
-    if self.body[0].y >= HEIGHT // CELL:
-        self.body[0].y = 0
-    if self.body[0].y < 0:
-        self.body[0].y = HEIGHT // CELL - 1
 
 
 FPS = 5

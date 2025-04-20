@@ -1,6 +1,6 @@
 import pygame
 
-playlist = [r"C:\Users\alinu\Documents\new_folder\labs\Wake Up In The Sky.mp3"]
+playlist = [r"C:\Users\alinu\Documents\new_folder\labs\Wake Up In The Sky.mp3",r"C:\Users\alinu\Documents\new_folder\labs\De Lacure - Qsh.mp3"]
 current_track = 0
 
 def play():

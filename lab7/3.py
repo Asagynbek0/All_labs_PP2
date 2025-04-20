@@ -7,7 +7,7 @@ WIDTH, HEIGHT = 500, 500
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Red Ball Controller")
 
-BALL_RADIUS = 25
+BALL_RADIUS = 20
 ball_x, ball_y = WIDTH // 2, HEIGHT // 2
 BALL_COLOR = (255, 0, 0)
 BG_COLOR = (255, 255, 255)

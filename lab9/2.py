@@ -71,9 +71,9 @@ class Snake:
 class Food:
   def __init__(self):
     self.food_types = [
-      {"color": colorGREEN, "weight": 70},  # Обычная еда (чаще)
+      {"color": colorGREEN, "weight": 70},  # Обычная еда 
       {"color": colorBLUE, "weight": 20},   # Средняя редкость
-      {"color": colorYELLOW, "weight": 10}  # Редкая еда (реже)
+      {"color": colorYELLOW, "weight": 10}  # Редкая еда 
     ]
     self.spawn_time = pygame.time.get_ticks()  # Время появления еды
     self.lifetime = random.randint(3000, 7000)  # Живет от 3 до 7 секунд
